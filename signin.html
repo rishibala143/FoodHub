@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign In</title>
+        <link rel="stylesheet" href="signin.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+    <body>
+        <div style="font-family: 'Poppins', sans-serif; margin-top: 50px;">
+        <p class="three" style="font-size: 32px; font-weight: bold; padding-left: 90px; color: #ea580c">FoodHub</p>
+        <i class="fa-solid fa-utensils" style="font-size: 20px; padding-left: 5px; padding-right: 80px; color: #ea580c;"></i>
+            <div class="signin-container">
+                <h2 style="margin-bottom: 5px;">Sign in</h2>
+                <p style="font-size: 14px;">or <a href="signup.html" class="one">create an account</a> </p>
+
+                <input type="email" placeholder="Email" class="two">
+                <input type="password" placeholder="Password" class="two">
+
+                <div class="remember">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <button class="sign-in-btn">Sign in</button>
+                <button id="google-signin-btn" class="google-btn">
+                    <img src="Images/google.jpeg" alt="Google">
+                Sign in with Google
+                </button>
+
+
+
+                <p class="forgot"><a href="#" id="forgot-password-link" class="one">Forgotten your password?</a></p>
+
+            </div>
+
+            <div>
+                <hr style="margin: 70px 50px 0px; color: #444;">
+                <footer style="text-align: center; padding: 10px 20px 0px; background-color: white; color: #ea580c; font-size: 14px;">
+                    <p>&copy; 2025 FoodHub. All rights reserved.</p>
+                </footer>
+            </div>
+
+        </div>
+        
+        <script src="signin.js" type="module" defer></script>
+    </body>
+</html>

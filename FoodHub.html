@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FoodHub</title>
+        <link rel="stylesheet" href="FoodHub.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    
+    <body>
+        <div style="font-family: 'Poppins', sans-serif; font-size: 16px;">
+        
+            <!-- Header -->
+        
+            <div style="padding-top: 10px;" class="divone">
+                <p class="one" style="font-size: 32px; font-weight: bold; color: #ea580c">FoodHub</p>
+                <i class="fa-solid fa-utensils" style="font-size: 20px; padding-left: 5px; padding-right: 80px; color: #ea580c;"></i>
+                <a href="#cuisines-src" class="one">Cuisines</a>
+                <a href="#desert-scr" class="one">Desert</a>
+                <a href="#drinks-scr" class="one">Drinks</a>
+            
+                <div class="two">
+                    <div class="search-wrapper">
+                        <input type="text" class="search-box" placeholder="Search food to order">                   
+                        <ul id="suggestions" class="suggestions-list"></ul>
+                    </div>
+                    <button class="search-btn">search</button>
+                </div>
+
+                <div class="user-actions">
+                    <div class="cart-icon-container" id="cart-area">
+                        <a href="cart.html" class="cart-link">
+                        <i class="fas fa-shopping-cart" style="color: grey; font-size: 20px; cursor: pointer;"></i>
+                        <span class="cart-counter" id="cart-count">0</span>
+                        </a>
+                    </div>
+
+                    <div class="signin-area" id="auth-area">
+                        <!-- This gets dynamically replaced -->
+                        <a href="signin.html" class="signin-btn" id="default-signin">Sign In</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Welcome -->
+
+            <div class="divtwo">
+                <p class="three">Delicious Food!!</p>
+                <p class="three">Served Fast!!</p>
+                <p style="text-align: center;">Discover amazing cuisines from around the world.</p>
+                <p style="text-align: center;">Fresh ingredients, authentic flavors, served to your table.</p>
+                <div class="ordernow"><a href="#cuisines-src" class="ordernow-btn">Order Now</a></div>
+            </div>
+
+            <!-- Feature -->
+
+            <div class="divthree">
+                <div class="feature">
+                    <i class="fa-solid fa-star"></i>
+                    <p class="four">Quality Food</p>
+                    <p class="five">Fresh ingredients and authentic recipes from experienced chefs.</p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <p class="four">Free Booking</p>
+                    <p class="five">Free booking of a table when orders are above ₹299, so order your foods now.</p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="four">Served Fast</p>
+                    <p class="five">The food is served to your table within 3-5 minutes.</p>
+                </div>
+            </div>
+
+            <!-- Cuisines -->
+
+            <!-- North indian -->
+
+            <div class="divfour" id="cuisines-src" style="scroll-margin-top: 100px;">
+                <p class="six">North Indian</p>
+                <button class="carousel-btn left" id="leftBtn-north" style="margin-left: 900px;"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn right" id="rightBtn-north"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="carousel-wrapper">
+                    <div class="box-container" id="carousel-north">
+                        <div class="food-card" id="buttery-naan">
+                            <div class="image-container">
+                                <img src="Images/North/buttery_naan.jpeg" alt="Buttery Naan">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="content">
+                                <h3>Buttery Naan</h3>
+                                <p>Soft, fluffy naan brushed with melted butter for rich, irresistible flavor.</p>
+                                <p class="price">₹150</p>
+                                <button class="cart-btn" onclick="addToCart('north-1')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="butter-chicken">
+                            <div class="image-container">
+                                <img src="Images/North/butter_chicken.jpeg" alt="Butter Chicken">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Butter Chicken</h3>
+                                <p>Butter chicken with tender chicken pieces simmered in a creamy, spiced tomato gravy.</p>
+                                <p class="price">₹280</p>
+                                <button class="cart-btn" onclick="addToCart('north-2')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="food-card" id="paneer-butter-masala">
+                            <div class="image-container">
+                                <img src="Images/North/paneer_butter_masala.jpeg" alt="Paneer Butter Masala">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                            </div>
+                            <div class="content">
+                                <h3>Paneer Butter Masala</h3>
+                                <p>Soft paneer cubes simmered in a rich, creamy tomato-based gravy with buttery spices.</p>
+                                <p class="price">₹270</p>
+                                <button class="cart-btn" onclick="addToCart('north-3')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="tandoori-chicken">
+                            <div class="image-container">
+                                <img src="Images/North/tandoori_chicken.jpeg" alt="Tandoori Chicken">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="content">
+                                <h3>Tandoori Chicken</h3>
+                                <p>Juicy chicken marinated in spiced yogurt and roasted to perfection in a tandoor.</p>
+                                <p class="price">₹290</p>
+                                <button class="cart-btn" onclick="addToCart('north-4')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="aloo-tikki-chaat">
+                            <div class="image-container">
+                                <img src="Images/North/aloo_tikki_chaat.jpeg" alt="Aloo Tikki Chaat">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.4</span>
+                            </div>
+                            <div class="content">
+                                <h3>Aloo Tikki Chaat</h3>
+                                <p>Crispy aloo tikki topped with tangy chutneys, creamy yogurt, and flavorful spices.</p>
+                                <p class="price">₹240</p>
+                                <button class="cart-btn" onclick="addToCart('north-5')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="daal-makhni">
+                            <div class="image-container">
+                                <img src="Images/North/daal_makhni.jpeg" alt="Daal Makhni">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.3</span>
+                            </div>
+                            <div class="content">
+                                <h3>Daal Makhni</h3>
+                                <p>Slow-cooked black lentils in a creamy, buttery gravy infused with rich spices.</p>
+                                <p class="price">₹260</p>
+                                <button class="cart-btn" onclick="addToCart('north-6')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="seekh-kebab">
+                            <div class="image-container">
+                                <img src="Images/North/seekh_kebab.jpeg" alt="Seekh Kebab">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.4</span>
+                            </div>
+                            <div class="content">
+                                <h3>Seekh Kebab</h3>
+                                <p>Minced meat blended with spices, shaped onto skewers, and grilled to smoky perfection.</p>
+                                <p class="price">₹200</p>
+                                <button class="cart-btn" onclick="addToCart('north-7')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- South indian -->
+
+            <div class="divfour">
+                <p class="six">South Indian</p>
+                <button class="carousel-btn left" id="leftBtn-south" style="margin-left: 900px;"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn right" id="rightBtn-south"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="carousel-wrapper">
+                    <div class="box-container" id="carousel-south">
+                        <div class="food-card" id="idly">
+                            <div class="image-container">
+                                <img src="Images/South/idli.jpeg" alt="Idly">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                            </div>
+                            <div class="content">
+                                <h3>Idly</h3>
+                                <p>Steamed, pillowy idlies served warm, perfect for soaking up rich, flavorful sambar.</p>
+                                <p class="price">₹90</p>
+                                <button class="cart-btn" onclick="addToCart('south-1')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="masala-dosai">
+                            <div class="image-container">
+                                <img src="Images/South/masala_dosai.jpeg" alt="Masala Dosai">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="content">
+                                <h3>Masala Dosai</h3>
+                                <p>Golden, crispy masala dosai filled with spiced potato, served with chutneys and sambar.</p>
+                                <p class="price">₹100</p>
+                                <button class="cart-btn" onclick="addToCart('south-2')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="food-card" id="appam">
+                            <div class="image-container">
+                                <img src="Images/South/appam.jpeg" alt="Appam">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Appam</h3>
+                                <p>Light, lacy appam with a soft center, perfect for pairing with rich coconut milk or stew.</p>
+                                <p class="price">₹120</p>
+                                <button class="cart-btn" onclick="addToCart('south-3')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="chicken-biryani">
+                            <div class="image-container">
+                                <img src="Images/South/chicken_biryani.jpeg" alt="Chicken Biryani">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                            </div>
+                            <div class="content">
+                                <h3>Chicken Biryani</h3>
+                                <p>Fragrant layered with tender meat and spices, cooked to perfection in aromatic basmati rice.</p>
+                                <p class="price">₹240</p>
+                                <button class="cart-btn" onclick="addToCart('south-4')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="chicken-curry">
+                            <div class="image-container">
+                                <img src="Images/South/chicken_curry.jpeg" alt="Chicken Curry">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Chicken Curry</h3>
+                                <p>Succulent chicken simmered in a rich, spiced gravy for a hearty and comforting curry experience.</p>
+                                <p class="price">₹180</p>
+                                <button class="cart-btn" onclick="addToCart('south-5')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="meen-pollichathu">
+                            <div class="image-container">
+                                <img src="Images/South/meen_pollichathu.jpeg" alt="Meen Pollichathu">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                            </div>
+                            <div class="content">
+                                <h3>Meen Pollichathu</h3>
+                                <p>Delicately spiced fish wrapped in banana leaf and pan-seared for smoky, authentic Kerala flavor.</p>
+                                <p class="price">₹320</p>
+                                <button class="cart-btn" onclick="addToCart('south-6')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="bisi-bele-bath">
+                            <div class="image-container">
+                                <img src="Images/South/bisi_bele_bath.jpeg" alt="Bisi Bele Bath">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.3</span>
+                            </div>
+                            <div class="content">
+                                <h3>Bisi Bele Bath</h3>
+                                <p>Hot and hearty made with lentils, rice, and vegetables simmered in bold South Indian spices.</p>
+                                <p class="price">₹260</p>
+                                <button class="cart-btn" onclick="addToCart('south-7')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="aviyal">
+                            <div class="image-container">
+                                <img src="Images/South/aviyal.jpeg" alt="Aviyal">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.4</span>
+                            </div>
+                            <div class="content">
+                                <h3>Aviyal</h3>
+                                <p>Medley of seasonal vegetables in a creamy coconut-yogurt gravy, with curry leaves and coconut oil.</p>
+                                <p class="price">₹200</p>
+                                <button class="cart-btn" onclick="addToCart('south-8')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chinese -->
+
+            <div class="divfour">
+                <p class="six">Chinese</p>
+                <button class="carousel-btn left" id="leftBtn-chinese" style="margin-left: 960px;"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn right" id="rightBtn-chinese"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="carousel-wrapper">
+                    <div class="box-container" id="carousel-chinese">
+                        <div class="food-card" id="schezwan-noodles">
+                            <div class="image-container">
+                                <img src="Images/Chinese/schezwan_noodles.jpeg" alt="Schezwan Noodles">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.5</span>
+                            </div>
+                            <div class="content">
+                                <h3>Schezwan Noodles</h3>
+                                <p>Delicious spicy noodles with tender chicken pieces, vegetables, and aromatic spices.</p>
+                                <p class="price">₹180</p>
+                                <button class="cart-btn" onclick="addToCart('chinese-1')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+    
+                        <div class="food-card" id="chicken-lollipop">
+                            <div class="image-container">
+                                <img src="Images/Chinese/chicken_lollipop.jpeg" alt="Chicken Lollipop">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.6</span>
+                            </div>
+                            <div class="content">
+                                <h3>Chicken Lollipop</h3>
+                                <p>Delicious fried and sauced chicken wings bursting with flavor and spice.</p>
+                                <p class="price">₹220</p>
+                                <button class="cart-btn" onclick="addToCart('chinese-2')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="chilli-chicken">
+                            <div class="image-container">
+                                <img src="Images/Chinese/chilli_chicken.jpeg" alt="Chilli Chicken">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Chilli Chicken</h3>
+                                <p>Hot and tangy chicken tossed with peppers and onions in Indo-Chinese style.</p>
+                                <p class="price">₹200</p>
+                                <button class="cart-btn" onclick="addToCart('chinese-3')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="fried-rice">
+                            <div class="image-container">
+                                <img src="Images/Chinese/fried_rice.jpeg" alt="Fried Rice">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.3</span>
+                            </div>
+                            <div class="content">
+                                <h3>Fried Rice</h3>
+                                <p>Stir-fried rice with crunchy vegetables and subtle Chinese flavors.</p>
+                                <p class="price">₹150</p>
+                                <button class="cart-btn" onclick="addToCart('chinese-4')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="spring-rolls">
+                            <div class="image-container">
+                                <img src="Images/Chinese/spring_rolls.jpeg" alt="Chilli Chicken">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Spring rolls</h3>
+                                <p>Crispy golden rolls stuffed with seasoned veggies, served with a sweet and spicy dipping sauce.</p>
+                                <p class="price">₹230</p>
+                                <button class="cart-btn" onclick="addToCart('chinese-5')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="hot-sour-soup">
+                            <div class="image-container">
+                                <img src="Images/Chinese/hot_sour_soup.jpeg" alt="Hot Sour Soup">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.3</span>
+                            </div>
+                            <div class="content">
+                                <h3>Hot Sour Soup</h3>
+                                <p>A flavorful Indo-Chinese soup with a spicy and sour kick, loaded with vegetables and tofu.</p>
+                                <p class="price">₹180</p>
+                                <button class="cart-btn" onclick="addToCart('chinese-6')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="kung-pao-chicken">
+                            <div class="image-container">
+                                <img src="Images/Chinese/kung_pao_chicken.jpeg" alt="Kung Pao Chicken">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Kung Pao Chicken</h3>
+                                <p>Classic Chinese stir-fry with tender chicken, crunchy peanuts, and veggies tossed in a spicy, tangy sauce.</p>
+                                <p class="price">₹220</p>
+                                <button class="cart-btn" onclick="addToCart('chinese-7')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+            <!-- Italian -->
+
+            <div class="divfour">
+                <p class="six">Italian</p>
+                <button class="carousel-btn left" id="leftBtn-italian" style="margin-left: 990px;"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn right" id="rightBtn-italian"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="carousel-wrapper">
+                    <div class="box-container" id="carousel-italian">
+                        <div class="food-card" id="penne-arrabbiata">
+                            <div class="image-container">
+                                <img src="Images/italian/penne_arrabbiata.jpeg" alt="Penne Arrabbiata">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="content">
+                                <h3>Penne Arrabbiata</h3>
+                                <p>Fiery penne pasta tossed in bold, garlicky tomato sauce — simple, spicy, and satisfying.</p>
+                                <p class="price">₹260</p>
+                                <button class="cart-btn" onclick="addToCart('italian-1')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="spaghetti-aglio-e-olio">
+                            <div class="image-container">
+                                <img src="Images/italian/spaghetti_aglio_e_olio.jpeg" alt="Spaghetti Aglio E Olio">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="content">
+                                <h3>Spaghetti Aglio E Olio</h3>
+                                <p>Golden spaghetti sautéed in garlic and olive oil, with a hint of chili for a bold, clean flavor.</p>
+                                <p class="price">₹250</p>
+                                <button class="cart-btn" onclick="addToCart('italian-2')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="pizza-margherita">
+                            <div class="image-container">
+                                <img src="Images/italian/pizza_margherita.jpeg" alt="Pizza Margherita">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="content">
+                                <h3>Pizza Margherita</h3>
+                                <p>Classic Margherita pizza with melted mozzarella, fresh basil, and tomato sauce on a crisp crust.</p>
+                                <p class="price">₹250</p>
+                                <button class="cart-btn" onclick="addToCart('italian-3')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <div class="food-card" id="fettuccine-alfredo">
+                            <div class="image-container">
+                                <img src="Images/italian/fettuccine_alfredo.jpeg" alt="Fettuccine Alfredo">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.6</span>
+                            </div>
+                            <div class="content">
+                                <h3>Fettuccine Alfredo</h3>
+                                <p>Velvety fettuccine coated in a luscious Alfredo sauce, smooth and buttery with every twirl.</p>
+                                <p class="price">₹220</p>
+                                <button class="cart-btn" onclick="addToCart('italian-4')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="insalata-caprese">
+                            <div class="image-container">
+                                <img src="Images/italian/insalata_caprese.jpeg" alt="Insalata Caprese">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Insalata Caprese</h3>
+                                <p>Fresh mozzarella and ripe tomato slices drizzled with olive oil, finished with fragrant basil.</p>
+                                <p class="price">₹210</p>
+                                <button class="cart-btn" onclick="addToCart('italian-5')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                                                
+                        <div class="food-card" id="creamy-mushroom-risotto">
+                            <div class="image-container">
+                                <img src="Images/italian/creamy_mushroom_risotto.jpeg" alt="Creamy Mushroom Risotto">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="content">
+                                <h3>Creamy Mushroom Risotto</h3>
+                                <p>Rich, creamy mushroom risotto, with earthy depth in every bite.</p>
+                                <p class="price">₹220</p>
+                                <button class="cart-btn" onclick="addToCart('italian-6')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="bruschetta-al-pomodoro">
+                            <div class="image-container">
+                                <img src="Images/italian/bruschetta_al_pomodoro.jpeg" alt="Bruschetta Al Pomodoro">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Bruschetta Al Pomodoro</h3>
+                                <p>Crispy toasted bruschetta topped with juicy tomatoes and basil, a fresh start to any Italian meal.</p>
+                                <p class="price">₹200</p>
+                                <button class="cart-btn" onclick="addToCart('italian-7')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="lasagna">
+                            <div class="image-container">
+                                <img src="Images/italian/lasagna.jpeg" alt="Lasagna">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.3</span>
+                            </div>
+                            <div class="content">
+                                <h3>Lasagna</h3>
+                                <p>Layered lasagna with rich meat sauce and creamy cheese, baked until bubbling and golden.</p>
+                                <p class="price">₹220</p>
+                                <button class="cart-btn" onclick="addToCart('italian-8')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desert -->
+
+            <div class="divfour" id="desert-scr" style="scroll-margin-top: 100px;">
+                <p class="six">Desert</p>
+                <button class="carousel-btn left" id="leftBtn-desert" style="margin-left: 980px;"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn right" id="rightBtn-desert"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="carousel-wrapper">
+                    <div class="box-container" id="carousel-desert">
+                        <div class="food-card" id="gulab-jamun">
+                            <div class="image-container">
+                                <img src="Images/Desert/gulab_jamun.jpeg" alt="Gulab Jamun">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Gulab Jamun</h3>
+                                <p>Soft, golden dumplings soaked in rose-scented sugar syrup, melting in the mouth with every bite.</p>
+                                <p class="price">₹100</p>
+                                <button class="cart-btn" onclick="addToCart('dessert-1')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+    
+                        <div class="food-card" id="carrot-halwa">
+                            <div class="image-container">
+                                <img src="Images/Desert/carrot_halwa.jpeg" alt="Carrot Halwa">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.6</span>
+                            </div>
+                            <div class="content">
+                                <h3>Carrot Halwa</h3>
+                                <p>Warm, rich carrot halwa slow-cooked with ghee, milk, and nuts. a traditional delight in every spoonful.</p>
+                                <p class="price">₹120</p>
+                                <button class="cart-btn" onclick="addToCart('dessert-2')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="jalebi-rabri">
+                            <div class="image-container">
+                                <img src="Images/Desert/jalebi_rabri.jpeg" alt="Jalebi Rabri">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Jalebi Rabri</h3>
+                                <p>Hot, crispy jalebis paired with chilled, creamy rabri. a heavenly blend of crunch and sweetness.</p>
+                                <p class="price">₹150</p>
+                                <button class="cart-btn" onclick="addToCart('dessert-3')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="kulfi">
+                            <div class="image-container">
+                                <img src="Images/Desert/kulfi.jpeg" alt="Kulfi">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="content">
+                                <h3>Kulfi</h3>
+                                <p>Dense and creamy traditional kulfi infused with cardamom and nuts, served chilled for a perfect finish.</p>
+                                <p class="price">₹120</p>
+                                <button class="cart-btn" onclick="addToCart('dessert-4')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="payasam">
+                            <div class="image-container">
+                                <img src="Images/Desert/payasam.jpeg" alt="Payasam">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Payasam</h3>
+                                <p>Sweet, creamy payasam simmered with milk, jaggery, and cardamom, garnished with ghee-roasted nuts.</p>
+                                <p class="price">₹125</p>
+                                <button class="cart-btn" onclick="addToCart('dessert-5')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="rasamalai">
+                            <div class="image-container">
+                                <img src="Images/Desert/rasamalai.jpeg" alt="Rasamalai">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="content">
+                                <h3>Rasamalai</h3>
+                                <p>Soft, spongy cheese discs soaked in saffron-infused milk, delicately flavored with cardamom and nuts.</p>
+                                <p class="price">₹180</p>
+                                <button class="cart-btn" onclick="addToCart('dessert-6')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="mishti-dol">
+                            <div class="image-container">
+                                <img src="Images/Desert/mishti_doi.jpeg" alt="Mishti Dol">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Mishti Dol</h3>
+                                <p>Thick, creamy sweetened curd fermented to perfection — a Bengali classic with a caramelized twist.</p>
+                                <p class="price">₹120</p>
+                                <button class="cart-btn" onclick="addToCart('dessert-7')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+            <!-- Drinks -->
+
+            <div class="divfour" id="drinks-scr" style="scroll-margin-top: 100px;">
+                <p class="six">Drinks</p>
+                <button class="carousel-btn left" id="leftBtn-drinks" style="margin-left: 980px;"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn right" id="rightBtn-drinks"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="carousel-wrapper">
+                    <div class="box-container" id="carousel-drinks">
+                        <div class="food-card" id="blue-lagoon">
+                            <div class="image-container">
+                                <img src="Images/Drinks/blue_lagoon.jpeg" alt="Blue Lagoon">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="content">
+                                <h3>Blue Lagoon</h3>
+                                <p>Chilled, vibrant blue lagoon mocktail with a citrusy twist, perfect for a refreshing burst of flavor.</p>
+                                <p class="price">₹140</p>
+                                <button class="cart-btn" onclick="addToCart('drink-1')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+    
+                        <div class="food-card" id="sweet-lassi">
+                            <div class="image-container">
+                                <img src="Images/Drinks/sweet_lassi.jpeg" alt="Sweet Lassi">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.6</span>
+                            </div>
+                            <div class="content">
+                                <h3>Sweet Lassi</h3>
+                                <p>Thick, creamy sweet lassi blended with yogurt and sugar, served chilled, traditional treat.</p>
+                                <p class="price">₹140</p>
+                                <button class="cart-btn" onclick="addToCart('drink-2')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="tender-coconut-water">
+                            <div class="image-container">
+                                <img src="Images/Drinks/tender_coconut_water.jpeg" alt="Tender Coconut Water">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Tender Coconut Water</h3>
+                                <p>Cool, naturally sweet tender coconut water served fresh light, hydrating, and refreshing.</p>
+                                <p class="price">₹130</p>
+                                <button class="cart-btn" onclick="addToCart('drink-3')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="strawberry-milkshake">
+                            <div class="image-container">
+                                <img src="Images/Drinks/strawberry_milkshake.jpeg" alt="Strawberry Milkshake">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="content">
+                                <h3>Strawberry Milkshake</h3>
+                                <p>Thick strawberry milkshake blended with berries and cream, a sweet and fruity indulgence.</p>
+                                <p class="price">₹180</p>
+                                <button class="cart-btn" onclick="addToCart('drink-4')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="virgin-mojito">
+                            <div class="image-container">
+                                <img src="Images/Drinks/virgin_mojito.jpeg" alt="Virgin Mojito">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Virgin Mojito</h3>
+                                <p>Refreshing virgin mojito with muddled mint, lime, and soda perfect for any time of day.</p>
+                                <p class="price">₹150</p>
+                                <button class="cart-btn" onclick="addToCart('drink-5')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="cold-coffee">
+                            <div class="image-container">
+                                <img src="Images/Drinks/cold_coffee.jpeg" alt="Cold Coffee">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="content">
+                                <h3>Cold Coffee</h3>
+                                <p>Chilled, frothy cold coffee blended with milk and ice — smooth, bold, and irresistibly energizing.</p>
+                                <p class="price">₹120</p>
+                                <button class="cart-btn" onclick="addToCart('drink-6')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+
+                        <div class="food-card" id="thandai">
+                            <div class="image-container">
+                                <img src="Images/Drinks/thandai.jpeg" alt="Thandai">
+                                <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="content">
+                                <h3>Thandai</h3>
+                                <p>Chilled, spiced Thandai made with milk, nuts, and saffron — a festive blend of flavor and tradition.</p>
+                                <p class="price">₹125</p>
+                                <button class="cart-btn" onclick="addToCart('drink-7')"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+            <!-- Footer -->
+
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-section logo-section">
+                        <h2 class="seven">FoodHub</h2>
+                        <p class="eight" style="color: white;">Delicious Food!! Served Fast!!</p>
+                        <p class="eight" style="color: white;">Serving happiness at your table within 3-5 minutes.</p>
+                    </div>
+
+                    <div class="footer-section links-section">
+                    <h3 class="seven">Company</h3>
+                        <ul class="eight">
+                            <li class="nine"><a href="#" class="ten">About Us</a></li>
+                            <li class="nine"><a href="#" class="ten">Team</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section links-section"> <h3>Support</h3>
+                        <ul class="eight">
+                            <li class="nine"><a href="#" class="ten">Help & Support</a></li>
+                            <li class="nine"><a href="#" class="ten">Partner with Us</a></li>
+                            <li class="nine"><a href="faq.html" class="ten">FAQs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section social-section"> <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/profile.php?id=100095562484083" target="_blank" class="eleven"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/Rishibala_B" target="_blank" class="eleven"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.instagram.com/_rishibala_/" target="_blank" class="eleven"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/rishibala-balakrishnan-14-mar/" target="_blank" class="eleven"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="footer-bottom"><p>&copy; 2025 FoodHub. All rights reserved.</p></div>
+            </footer>
+        </div>
+
+        <script src="cart.js"></script>
+        <script src="FoodHub.js" type="module" defer></script>
+    </body>
+</html>

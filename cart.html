@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cart</title>
+        <link rel="stylesheet" href="cart.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+    <body>
+        <div style="font-family: 'Poppins', sans-serif;">
+            <div class="cart-container">
+
+                <!-- Header -->
+                
+                <div class="cart-header">
+                    <div class="header-content">
+                        <a href="FoodHub.html" class="back-btn"> <i class="fas fa-arrow-left"></i> Back to Menu</a>
+                        <h1 class="cart-title">Your Cart (<span id="cart-count">0</span> items)</h1>
+                        <button class="clear-btn" onclick="clearCart()">Clear All</button>
+                    </div>
+                </div>
+
+                <!-- Cart -->
+
+                <div class="cart-content">
+
+                    <!-- Empty Cart Message -->
+                    
+                    <div id="empty-cart" class="empty-cart">
+                        <i class="fas fa-shopping-bag empty-icon"></i>
+                        <h2 style="font-size: 24px; font-weight: 600; color: #444; -bottom: 16px;">Your cart is empty!!</h2>
+                        <p style="color: #6b7280; margin-bottom: 32px;">Looks like you haven't added any foods to your cart yet.</p>
+                        <a href="FoodHub.html" class="start-ordering-btn">Start Ordering</a>
+                    </div>
+
+                    <!-- Cart Items -->
+
+                    <div id="cart-items" class="cart-items">
+                        <!-- Cart items will be added here -->
+                    </div>
+
+                    <!-- Order Summary -->
+
+                    <div id="order-summary" class="order-summary">
+                        <div class="summary">
+                            <h2 style="font-size: 20px; font-weight: bold; color: #111827; margin-bottom: 24px;">Order Summary</h2>
+                            
+                            <div class="summary-content">
+                                <span>Subtotal</span>
+                                <span id="subtotal">₹0</span>
+                            </div>
+                    
+                            <div class="summary-content">
+                                <span>Booking Fee</span>
+                                <span id="delivery-fee">₹50</span>
+                            </div>
+                    
+                            <div class="summary-content">
+                                <span>Tax (5%)</span>
+                                <span id="tax">₹0</span>
+                            </div>
+
+                            <!-- Table Number -->
+                            
+                            <div class="summary-content">
+                                <label for="table-number" style="font-weight: 500; margin-top: 10px;">Table Number</label>
+                                <input type="number" id="table-number" class="table-box" name="table_number" placeholder="Enter table number" min="1" max="12" required>
+                            </div>
+
+                            <!-- Booking Time -->
+
+                            <div class="summary-content">
+                                <label for="booking-time" style="font-weight: 500; margin-top: 10px;">Booking Date & Time</label>
+                                <input type="datetime-local" id="booking-time" class="booking-box" name="booking_time" required>
+                            </div>
+
+                            <div id="free-delivery-msg" class="free-delivery-msg">
+                                Add <span id="remaining-amount">₹299</span> more for FREE booking!
+                            </div>
+                    
+                            <div class="summary-total">
+                                <span>Total</span>
+                                <span id="total">₹0</span>
+                            </div>
+
+                            <!--<form id="bookingForm" method="POST" action="book_table.php">
+                                <input type="hidden" name="cartData" id="cartData">
+                                <button type="button" class="table-Booking-btn" onclick="sendCartToServer(5)">Proceed to Book Table</button>
+                            </form>-->
+                            <button class="table-Booking-btn" onclick="sendCartToServer(5)">Proceed to Book Table</button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <script src="cart.js"></script>
+    </body>
+</html>

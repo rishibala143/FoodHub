@@ -1,0 +1,95 @@
+.signin-container {
+    background: white;
+    border: 1px solid #000;
+    padding: 40px;
+    max-width: 350px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 80px;
+    margin-left: 600px;
+}
+
+.one {
+    color: #ea580c; 
+    text-decoration: none;
+}
+
+.two {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.three {
+    display: inline;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.remember input {
+    margin-right: 8px;
+}
+
+.sign-in-btn {
+    width: 100%;
+    background-color: #ea580c;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.sign-in-btn:hover{
+    background-color: #dc2626;
+    color: #f0f0f0;
+}
+
+.sign-up-btn {
+    width: 100%;
+    background-color: #ea580c;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.sign-up-btn:hover{
+    background-color: #dc2626;
+    color: #f0f0f0;
+}
+
+
+.google-btn {
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.google-btn img {
+    width: 18px;
+}
+
+.forgot {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 14px;
+}

@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+.faq-wrapper {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.divone {
+    display: flex;
+    align-items: center;
+    margin-left: 90px;
+}
+
+.heading {
+    font-size: 36px;
+    text-align: center;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    background-color: white;
+    padding: 10px 25px;
+    border-left: 5px solid #ea580c;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.question {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ea580c;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.answer {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.answer a {
+    color: #ea580c;
+    text-decoration: none;
+}
